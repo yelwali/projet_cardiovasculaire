@@ -1,19 +1,36 @@
-# Détection des maladies cardiovasculaires
+# 🏥 Détection des maladies cardiovasculaires avec l'IA  
 
-## Description
-Ce projet utilise l'apprentissage automatique pour prédire la présence de maladies cardiovasculaires à partir de données médicales. Plusieurs modèles de machine learning ont été testés afin de trouver le plus performant.
+## 📌 Description  
+Ce projet vise à prédire la présence de maladies cardiovasculaires à l'aide de l'apprentissage automatique. Plusieurs modèles de machine learning ont été testés et optimisés pour obtenir les meilleures performances.  
 
-## Technologies utilisées
-- Python
-- Pandas, Numpy, Seaborn, Matplotlib (Visualisation et traitement des données)
-- Scikit-Learn (Modèles de machine learning)
-- XGBoost, AdaBoost, RandomForest (Ensembles d'apprentissage)
+## 📊 Prétraitement des données  
+- Imputation des valeurs manquantes avec **KNNImputer**  
+- Normalisation des données avec **RobustScaler**  
+- Équilibrage des classes avec **SMOTE** pour éviter le déséquilibre des données  
 
-## Modèles testés
-- Régression Logistique
-- Support Vector Machine (SVM)
-- Arbres de décision
-- XGBoost (Meilleur modèle avec une accuracy d'environ 80% et un recall de 94%)
+## 🏆 Modèles utilisés et performances  
+| Modèle            | Accuracy | Recall  |
+|------------------|----------|---------|
+| Régression linéaire  | 0.565  | 0.612  |
+| Decision Tree       | 0.737  | 0.907  |
+| XGBoost            | 0.738  | 0.912  |
+| AdaBoost           | 0.738  | 0.935  |
+| RandomForest       | 0.746  | 0.907  |
+
+📌 **Meilleurs modèles** :  
+- **RandomForest** : Accuracy = **0.746**, Recall = **0.907**  
+- **AdaBoost** : Accuracy = **0.738**, Recall = **0.935**  
+
+## 🚀 Optimisation  
+- Recherche des hyperparamètres avec **GridSearchCV**  
+- Sélection des meilleures features avec **SHAP values**  
+- Test de différentes méthodes d'équilibrage (SMOTE, ADASYN)  
+
+## 🛠 Technologies utilisées  
+- **Python** (Scikit-learn, XGBoost, Pandas, Matplotlib, Seaborn)  
+- Jupyter Notebook pour l'analyse des données  
+
+## 📂 Structure du projet  
 
 ## Installation
 1. Cloner le dépôt GitHub :
@@ -31,14 +48,6 @@ Ce projet utilise l'apprentissage automatique pour prédire la présence de mala
    ```bash
    python main.py
    ```
-3. Les résultats de la classification seront affichés avec des métriques de performance.
-
-## Résultats et Analyse
-L'algorithme **XGBoost** s'est avéré être le plus performant avec :
-- **Accuracy :** ~80%
-- **Recall :** ~94%
-
-Ces performances montrent que le modèle est efficace pour la détection précoce des maladies cardiovasculaires.
 
 ## Auteur
 [Youssef El Wali](https://www.linkedin.com/in/youssef-el-wali-7b7765263)
